@@ -6,7 +6,8 @@ import Prism from 'prismjs'
 
 import { Layout } from '../../components/common/layout'
 import { Spirit } from '../../styles/spirit-styles'
-import { Tags, RelatedPosts } from '../../components/common'
+import { RelatedPosts } from '../../components/common'
+import { Tags } from '@tryghost/helpers-react'
 import { MetaData, getMetaImageUrls } from '../../components/common/meta'
 
 class FAQ extends React.Component {
@@ -36,9 +37,8 @@ class FAQ extends React.Component {
                                 <Tags
                                     post={post}
                                     separator="false"
-                                    html
                                     classes="white titleslash-white pl4 ml4 relative"
-                                    linkToPrefix="faq"
+                                    permalink="/faq/:slug/"
                                     linkClasses="link dim white"
                                 />
                             </h1>
